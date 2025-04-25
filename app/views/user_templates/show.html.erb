@@ -26,11 +26,13 @@
 
   <% @the_user.own_photos.each do |a_photo| %>
   <tr>
-    <td>Image</td>
-    <td>Owner</td>
-    <td>Caption</td>
-    <td>Posted</td>
-    <td></td>
+    <td>
+      <img src="<%= a_photo.image %>">
+    </td>
+    <td><%= a_photo.poster.username %></td>
+    <td><%= a_photo.caption %></td>
+    <td><%= a_photo.created_at %></td>
+    <td>Show details</td>
   </tr>
   <% end %>
 
