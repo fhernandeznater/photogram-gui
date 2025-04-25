@@ -18,7 +18,7 @@
 
   <dt>Posted</dt>
   <dd>
-    <img src="<%= @the_photo.created_at %>">
+    <%= @the_photo.created_at %>
   </dd>
 
   <dt>Edit photo</dt>
@@ -45,7 +45,7 @@
 
     <% @the_photo.comments.each do |a_comment| %>
     <tr>
-      <td><%= a_comment.commenter %></td>
+      <td><%= a_comment.commenter.username %></td>
       <td><%= a_comment.body %></td>
       <td><%= a_comment.created_at %></td>
     </tr>
